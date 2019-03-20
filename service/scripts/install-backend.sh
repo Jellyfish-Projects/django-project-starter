@@ -1,8 +1,6 @@
 #!/bin/bash
 
 virtualenv=false;
-pygeppetto_folder="pygeppetto-django"
-pygeppetto_django_repo="https://github.com/MetaCell/pygeppetto-django.git -b development-roman $pygeppetto_folder";
 
 while getopts "v" opt
 do
@@ -17,9 +15,3 @@ if [ "$virtualenv" = true ] ; then
 fi
 
 pip install -r requirements.txt;
-
-git clone $pygeppetto_django_repo;
-
-cd $pygeppetto_folder;
-
-pip install -e .

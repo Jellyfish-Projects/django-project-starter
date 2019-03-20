@@ -1,4 +1,9 @@
-install: install-backend
+init: install create-django-project
+
+create-django-project:
+	django-admin.py startproject src
+
+install: install-dev install-backend
 	@echo "==========================="
 	@echo "=        Finished         ="
 	@echo "==========================="
