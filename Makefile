@@ -27,8 +27,7 @@ install-dev:
 	pip install -r requirements-dev.txt
 
 run-dev: migrate
-	make run-django & \
-	make run-frontend
+	make run-django
 
 django-migrate: migrations migrate
 
